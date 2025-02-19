@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private float turnspeed = 200f;
     public float thrust = 5f;
     [SerializeField] public float drag = 0.99f;
     private float horizontal;
     [SerializeField] private float vertical;
     private Rigidbody rb;
+
+    public GameObject cam;
+    public Vector3 offset = new Vector3(0, 0, -10);
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +31,7 @@ public class Movement : MonoBehaviour
 
         rb.AddForce(transform.up * vertical * thrust);
         rb.velocity *= drag;
+
+        cam.transform.position = transform.position + offset;
     }
 }
