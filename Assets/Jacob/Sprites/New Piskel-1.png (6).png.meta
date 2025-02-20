@@ -157,10 +157,10 @@ TextureImporter:
         rgba: 4294967040
     - name: Fromt.Hand
       guid: d478546a2cb2886428f5c3b052fceaaa
-      position: {x: 78.69652, y: 190.03397, z: 11}
-      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      position: {x: 124.42649, y: 0.94895846, z: 11}
+      rotation: {x: 0, y: 0, z: -0.011465629, w: 0.99993426}
       length: 25.526134
-      parentId: -1
+      parentId: 3
       color:
         serializedVersion: 2
         rgba: 4294901760
@@ -175,10 +175,10 @@ TextureImporter:
         rgba: 4294902015
     - name: Front.Foot
       guid: 9cafdb3c852ad444b87d93ee19377ba8
-      position: {x: 78.15341, y: 28.730505, z: 6}
-      rotation: {x: 0, y: 0, z: -0.69920796, w: 0.7149183}
+      position: {x: 124.91879, y: 0.5105827, z: 6}
+      rotation: {x: 0, y: 0, z: 0.008804885, w: 0.9999613}
       length: 24.445951
-      parentId: -1
+      parentId: 5
       color:
         serializedVersion: 2
         rgba: 4278223103
@@ -193,10 +193,10 @@ TextureImporter:
         rgba: 4278255488
     - name: Back.Hand
       guid: 5fc65a61608503e4f8d2e7ec39afc79f
-      position: {x: 390.44125, y: 188.40463, z: -11}
-      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      position: {x: 125.59125, y: 3.0149803, z: -11}
+      rotation: {x: 0, y: 0, z: -0.013949259, w: 0.9999028}
       length: 26.612347
-      parentId: -1
+      parentId: 7
       color:
         serializedVersion: 2
         rgba: 4286643968
@@ -211,10 +211,10 @@ TextureImporter:
         rgba: 4294934528
     - name: Back.Foot
       guid: 2d084c9cc24e1974fa5691bfdc60d3fc
-      position: {x: 389.89816, y: 28.730505, z: -6}
-      rotation: {x: 0, y: 0, z: -0.69920814, w: 0.7149182}
+      position: {x: 124.91631, y: 0.035206407, z: -6}
+      rotation: {x: 0, y: 0, z: 0.013423177, w: 0.99990994}
       length: 24.445953
-      parentId: -1
+      parentId: 9
       color:
         serializedVersion: 2
         rgba: 4294901888
