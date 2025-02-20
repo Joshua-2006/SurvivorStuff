@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float vertical;
     private Rigidbody rb;
 
+    public bool hasPowerup;
     public GameObject cam;
     public Vector3 offset = new Vector3(0, 0, -10);
     // Start is called before the first frame update
@@ -33,5 +34,13 @@ public class Movement : MonoBehaviour
         rb.velocity *= drag;
 
         cam.transform.position = transform.position + offset;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Powerup"))
+        {
+            hasPowerup = true;
+            Destroy(other.gameObject);
+        }
     }
 }
