@@ -6,16 +6,17 @@ public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private int enemies;
     [SerializeField] private Enemy enemy;
+    public float spawnSpeed = 5;
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("Spawn", 1, spawnSpeed);
     }
 
     // Update is called once per frame
     void Update()
     {
-        InvokeRepeating("Spawn", 1, 5);
+        StartCoroutine(Wait());
     }
     public Vector3 SpawnPos()
     {
@@ -30,7 +31,7 @@ public class SpawnManager : MonoBehaviour
     }
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(5);
-        Spawn();
+        yield return new WaitForSeconds(20);
+        spawnSpeed /= 2;
     }
 }
