@@ -6,11 +6,12 @@ public class Enemy : MonoBehaviour
 {
     public Movement player;
     public float speed;
-    
+    public GameManager gm;
     // Start is called before the first frame update
     void Start()
     {
         player = FindAnyObjectByType<Movement>();
+        gm = FindAnyObjectByType<GameManager>();
     }
 
     // Update is called once per frame
@@ -24,6 +25,11 @@ public class Enemy : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            gm.health -= 1;
+            gm.healthText.text = $"Health: {gm.health}";
+            Destroy(gameObject);
+        }
     }
 }

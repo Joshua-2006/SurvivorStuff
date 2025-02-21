@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         score = 0;
+        health = 3;
+        scoreText.text = $"Score: {score}";
+        healthText.text = $"Health: {health}";
     }
 
     // Update is called once per frame

@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     public GameObject powerupIndicator;
     public GameObject projectile;
     public GameObject firePoint;
+    public GameManager gm;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +43,10 @@ public class Movement : MonoBehaviour
         if(Input.GetKey(KeyCode.Space))
         {
             Instantiate(projectile, firePoint.transform.position, transform.rotation);
+        }
+        if(gm.health <=0)
+        {
+            Destroy(gameObject);
         }
     }
     private void OnTriggerEnter(Collider other)
