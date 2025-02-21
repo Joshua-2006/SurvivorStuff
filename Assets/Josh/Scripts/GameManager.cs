@@ -23,6 +23,6 @@ public class GameManager : MonoBehaviour
     public void Score()
     {
         score += 50;
-        scoreText.text = $"";
+        scoreText.text = $"Score: {score}";
     }
 }
