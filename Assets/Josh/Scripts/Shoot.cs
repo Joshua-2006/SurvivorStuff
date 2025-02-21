@@ -6,12 +6,13 @@ public class Shoot : MonoBehaviour
 {
     public Rigidbody rb;
     public float speed = 10;
+    public GameManager gm;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
+        gm = GetComponent<GameManager>();
     }
 
     // Update is called once per frame

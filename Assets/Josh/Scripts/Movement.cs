@@ -43,16 +43,12 @@ public class Movement : MonoBehaviour
         {
             Instantiate(projectile, firePoint.transform.position, transform.rotation);
         }
-
-        powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
-
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Powerup"))
         {
-            powerupIndicator.gameObject.SetActive(true);
-            hasPowerup = true; 
+            hasPowerup = true;
             Destroy(other.gameObject);
             StartCoroutine(PowerupCountdownRoutine());
 
@@ -60,7 +56,6 @@ public class Movement : MonoBehaviour
             {
                 yield return new WaitForSeconds(7);
                 hasPowerup = false;
-                powerupIndicator.gameObject.SetActive(false);
             }
         }
     }
