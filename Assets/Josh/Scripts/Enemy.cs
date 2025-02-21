@@ -22,4 +22,8 @@ public class Enemy : MonoBehaviour
             transform.position += direction * speed * Time.deltaTime;
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+    }
 }

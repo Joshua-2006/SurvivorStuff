@@ -17,6 +17,8 @@ public class Movement : MonoBehaviour
     public Vector3 offset = new Vector3(0, 0, -10);
     private float powerupStrength = 15.0f;
     public GameObject powerupIndicator;
+    public GameObject projectile;
+    public GameObject firePoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,11 @@ public class Movement : MonoBehaviour
         rb.velocity *= drag;
 
         cam.transform.position = transform.position + offset;
+
+        if(Input.GetKey(KeyCode.Space))
+        {
+            Instantiate(projectile, firePoint.transform.position, transform.rotation);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

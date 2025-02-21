@@ -6,18 +6,30 @@ public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private int enemies;
     [SerializeField] private Enemy enemy;
-    public float spawnSpeed = 5;
-    public bool spawn;
+    public float spawnInterval = 5;
+    public float timer;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Spawn", 1, spawnSpeed);
+       // InvokeRepeating("Spawn", 1, spawnSpeed);
+        timer = spawnInterval;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //StartCoroutine(Wait());
+        timer -= Time.deltaTime;
+        if(timer <= 0)
+        {
+            Spawn();
+            spawnInterval *= 0.5f;
+            timer = spawnInterval;
+        }
+        if(spawnInterval == 0)
+        {
+            spawnInterval = 5;
+        }
+        
     }
     public Vector3 SpawnPos()
     {
